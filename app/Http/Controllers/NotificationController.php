@@ -21,7 +21,8 @@ class NotificationController extends Controller
                 [ 
                     'name' => $item->name,
                     'description' => $item->description,
-                    'created_at' => $item->created_at
+                    'created_at' => $item->created_at,
+                    'link' => $item->link
                 ]
             );
         }
