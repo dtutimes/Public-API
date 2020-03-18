@@ -28,6 +28,11 @@ Route::middleware('throttle:60,1')->group(function () {
 
 	Route::get('society','SocietyController@index');
 	Route::get('society/{slug}','SocietyController@show');
+	Route::get('society/{slug}/news','SocietyController@news');
+	Route::get('society/{slug}/gallery','SocietyController@gallery');
+
+	//All News irrespective of society
+	Route::get('news','NewsController@index');
 
 	Route::get('user','UserController@index');
 	Route::get('user/{id}','UserController@show');
