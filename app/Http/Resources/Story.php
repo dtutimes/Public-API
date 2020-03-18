@@ -27,6 +27,7 @@ class Story extends JsonResource
             'status' => $this->status,
             'imgUrl'=> $this->getFirstMediaUrl('blog_images', 'fullscreen'),
             'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
             'category' => $category,
             'user' => $user
         ];
