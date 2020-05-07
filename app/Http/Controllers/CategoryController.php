@@ -31,7 +31,7 @@ class CategoryController extends Controller
         $list = [];
         $category_object =  Category::where('id', $id)->firstOrFail();
 
-        $stories = Story::where('status', 'published')->where('category_id', $id)->latest()->paginate(10);
+        $stories = Story::where('status', 'published')->where('category_id', $id)->orderBy('published_at', 'desc')->paginate(10);
 
         return StoryResource::collection($stories);
     }
