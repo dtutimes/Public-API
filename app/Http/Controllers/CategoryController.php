@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Story;
+use App\Http\Resources\Story as StoryResource;
 
 class CategoryController extends Controller
 {
@@ -31,20 +32,8 @@ class CategoryController extends Controller
         $category_object =  Category::where('id', $id)->firstOrFail();
 
         $stories = Story::where('status', 'published')->where('category_id', $id)->latest()->paginate(10);
-        foreach($stories as $story){
-            // if ($item->status != 'published') continue;
-            $story->makeHidden(['body', 'media']);
-            $story['imgUrl'] = $story->getFirstMediaUrl('blog_images', 'fullscreen');
-            array_push($list,$story);
-        }
-        // $category_object['stor'] = $list;
-        $result = [
-            'id' => $category_object->id,
-            'name' => $category_object->name,
-            'item' => $list
-        ];
 
-        return $result;
+        return StoryResource::collection($stories);
     }
 
     /**
