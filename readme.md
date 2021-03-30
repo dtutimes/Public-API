@@ -68,6 +68,8 @@
     created_at | Creation date of media
     updated_at | Updation date of media
 
+    > You can also get specific post by providing its id.( For example: https://api.dtutimes.com/v1/edition/61 )
+
 * ### Facebook
     #### Example:
     > https://api.dtutimes.com/v1/facebook
@@ -85,6 +87,21 @@
     name | Name of Account
     website | DTU times official website
 
+* ### Facebook Posts
+    #### Example:
+    > https://api.dtutimes.com/v1/facebook/post
+    #### Return value
+    Field | Description
+    --- | --- 
+    created_time | Details of creation of post
+    full_picture | Link of picture of the post
+    message | message included in the post
+    status_type | Status of the post
+    permalink_url | Facebook Post link
+    id | Id of the post
+    
+    > You can also get specific post by providing its id.( For example: https://api.dtutimes.com/v1/facebook/post/145561028808040_4347191505311617 )
+    
 * ### Device
     #### Example:
     > https://api.dtutimes.com/v1/device
