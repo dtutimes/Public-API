@@ -3,55 +3,43 @@
 ## Setup
 
 ## Routes
-
-* ### Story
-    #### Example:
-    > https://api.dtutimes.com/v1/story
-
-    ### Parameters
-    Parameter | Description
-    --- | --- 
-    {slug} | unique slug of the story
-
-
-    #### Return value
-
-    Field | Description
-    --- | --- 
-    id | Unique id of story
-    title | title of the story
-     biliner | two lines on the topic of story
-     slug | slug used in the url
-     views | numver of views
-     status | status of publication
-     imgUrl |  link of image used
-     created_at | array of dates and timezone of creation
-     updated_at | array of dates and timezone of updation
-     published_at | date of publicition
-     category | array containing details about the story
-     user | array containing details about the author (user)
-    
-     
 * ### Editions
     #### Example:
     > https://api.dtutimes.com/v1/edition
     #### Return value
+    An array of Edition Objects
     Field | Description
     --- | --- 
-    *Still* | `renders`
-    1 | 2 
-
-
-* ### Instagram
-    #### Example:
-    > https://api.dtutimes.com/v1/instagram
-    #### Return value
+    id | Id of edition
+    name | Edition Name
+    link | Link of edition pdf
+    ajax | 
+    deleted_at | Deletion date of edition (Null if not deleted)
+    created_at | Creation date of edition
+    updated_at | Updation date of edition
+    Period | Period of the edition
+    sID | 
+    imgUrl | COver Page of edition
+    media | An array of **Media Objects**
+    
+    ### Media Object
     Field | Description
     --- | --- 
-    *Still* | `renders`
-    1 | 2 
-
-
+    id | Id of the media
+    model_type | 
+    model_id | 
+    collection_name | Name of the collection
+    name | Media Name
+    file_name | Name of the file
+    mime_type | tyoe of media
+    disk | Public/Private
+    size | Size of the media
+    manipulations | 
+    custom_properties | 
+    responsive_images | 
+    order_column |
+    created_at | Creation date of media
+    updated_at | Updation date of media
 
 * ### Facebook
     #### Example:
@@ -61,14 +49,14 @@
     --- | --- 
     fan_count | Number of followers
     category | Account category
-    description | 
-    cover |
-    emails |
-    id | 
-    link |
-    location |
-    name |
-    website |
+    description | Account Description
+    cover | Cover photo and other details
+    emails | Email Ids with the account
+    id | ID of the account
+    link | Link of facebook page 
+    location | Precise location of DTU times
+    name | Name of Account
+    website | DTU times official website
 
 * ### Device
     #### Example:
