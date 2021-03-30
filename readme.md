@@ -19,16 +19,80 @@
     --- | --- 
     id | Unique id of story
     title | title of the story
-     biliner | two lines on the topic of story
-     slug | slug used in the url
-     views | numver of views
-     status | status of publication
-     imgUrl |  link of image used
-     created_at | array of dates and timezone of creation
-     updated_at | array of dates and timezone of updation
-     published_at | date of publicition
-     category | array containing details about the story
-     user | array containing details about the author (user)
+    biliner | two lines on the topic of story
+    slug | unique keyword
+    views | number of views
+    status | status of publication
+    imgUrl |  link of image used
+    created_at | array of dates and timezone of creation
+    updated_at | array of dates and timezone of updation
+    published_at | date of publicition
+    category | array containing details about the story
+    user | array containing details about the author (user)
+     
+     
+* ### Category
+    #### Example:
+    > https://api.dtutimes.com/v1/category
+    ### Parameters
+    Parameter | Description
+    --- | --- 
+    {id} | unique id 
+
+
+    #### Return value
+
+    Field | Description
+    --- | --- 
+    id | Unique id
+    name | Type of category
+    slug | unique keyword
+    created_at | date of creation
+    updated_at | date of updation
+    
+    
+* ### Gallery
+    #### Example:
+    > https://api.dtutimes.com/v1/gallery
+    ### Parameters
+    Parameter | Description
+    --- | --- 
+    {slug} | unique slug of the image
+
+
+    #### Return value
+
+    Field | Description
+    --- | --- 
+    name | Type of category
+    biliner | two lines on the topic of story
+    slug | unique keyword
+    album_id | 
+    status | status of publicition
+    album_imgUrl | url of album cover page image
+    
+    
+ * ### News
+    #### Example:
+    > https://api.dtutimes.com/v1/news
+   
+    #### Return value
+
+    Field | Description
+    --- | --- 
+    id | Unique id of news
+    title | title of the news
+    uuid | universal unique id
+    society_id | unique id of society
+    status | status of publication
+    description | description about the news
+    view | number of views
+    created_at | date of creation
+    updated_at | date of updation
+    imgUrl |  link of image used
+    society | object containing details about the society and the society news
+    media | array of objects describing about the media 
+    
      
 * ### Editions
     #### Example:
