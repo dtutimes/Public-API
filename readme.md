@@ -29,10 +29,10 @@
 * ### Story
     #### Example:
     > https://api.dtutimes.com/v1/story
-    ### Parameters
-    Parameter | Description
+    ### Specific keywords
+    keywords | Description
     --- | --- 
-    {slug} | details about the selected story
+    {slug} | details about the specific story
 
 
     #### Return value
@@ -56,8 +56,8 @@
 * ### Category
     #### Example:
     > https://api.dtutimes.com/v1/category
-    ### Parameters
-    Parameter | Description
+    ### Specific keywords
+    keywords | Description
     --- | --- 
     {id} | details about the unique category
 
@@ -76,8 +76,8 @@
 * ### Gallery
     #### Example:
     > https://api.dtutimes.com/v1/gallery
-    ### Parameters
-    Parameter | Description
+    ### Specific keywords
+    keywords | Description
     --- | --- 
     {slug} | details about the selected gallery
 
@@ -97,9 +97,8 @@
  * ### Society
     #### Example:
     > https://api.dtutimes.com/v1/society
-    ### Parameters
-    Parameter | Description
-    --- | --- 
+    ### Specific keywords
+    keywords | Description
     {slug} | details about the society
     {slug}/news | news about the selected society 
     {slug}/gallery | gallery details of the selected society
@@ -154,8 +153,8 @@
 * ### User
     #### Example:
     > https://api.dtutimes.com/v1/user
-    ### Parameters
-    Parameter | Description
+    ### Specific keywords
+    keywords | Description
     --- | --- 
     {id} | unique id of the user
 
