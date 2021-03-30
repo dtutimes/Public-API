@@ -3,6 +3,35 @@
 ## Setup
 
 ## Routes
+
+* ### Story
+    #### Example:
+    > https://api.dtutimes.com/v1/story
+
+    ### Parameters
+    Parameter | Description
+    --- | --- 
+    {slug} | unique slug of the story
+
+
+    #### Return value
+
+    Field | Description
+    --- | --- 
+    id | Unique id of story
+    title | title of the story
+     biliner | two lines on the topic of story
+     slug | slug used in the url
+     views | numver of views
+     status | status of publication
+     imgUrl |  link of image used
+     created_at | array of dates and timezone of creation
+     updated_at | array of dates and timezone of updation
+     published_at | date of publicition
+     category | array containing details about the story
+     user | array containing details about the author (user)
+    
+     
 * ### Editions
     #### Example:
     > https://api.dtutimes.com/v1/edition
