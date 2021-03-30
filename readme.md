@@ -4,13 +4,35 @@
 
 ## Routes
 
+* ### Index
+    #### Example:
+    > https://api.dtutimes.com/v1
+  
+    #### Return value
+
+    Field | Description
+    --- | --- 
+    id | Unique id
+    title | title of the post
+    biliner | two lines on the topic of post
+    slug | unique keyword
+    views | number of views
+    status | status of publication
+    imgUrl |  url of the image 
+    created_at | array of dates and timezone of creation
+    updated_at | array of dates and timezone of updation
+    published_at | date of publicition
+    category | array containing details about the post
+    user | array containing details about the author (user)
+
+
 * ### Story
     #### Example:
     > https://api.dtutimes.com/v1/story
     ### Parameters
     Parameter | Description
     --- | --- 
-    {slug} | unique slug of the story
+    {slug} | details about the selected story
 
 
     #### Return value
@@ -37,7 +59,7 @@
     ### Parameters
     Parameter | Description
     --- | --- 
-    {id} | unique id 
+    {id} | details about the unique category
 
 
     #### Return value
@@ -57,7 +79,7 @@
     ### Parameters
     Parameter | Description
     --- | --- 
-    {slug} | unique slug of the image
+    {slug} | details about the selected gallery
 
 
     #### Return value
@@ -70,7 +92,43 @@
     album_id | 
     status | status of publicition
     album_imgUrl | url of album cover page image
-    
+ 
+ 
+ * ### Society
+    #### Example:
+    > https://api.dtutimes.com/v1/society
+    ### Parameters
+    Parameter | Description
+    --- | --- 
+    {slug} | details about the society
+    {slug}/news | news about the selected society 
+    {slug}/gallery | gallery details of the selected society
+
+
+    #### Return value
+
+    Field | Description
+    --- | --- 
+    id | Unique id of the user
+    name | name of the user
+    category | category type of the society
+    slug | unique keyword of the society
+    uuid | universal unique id
+    user_id | unique society id
+    status | status of publicition
+    decription | description about the society
+    linkedin | linkedin url of society head
+    facebook | facebook url of society head
+    instagram | instagram url of society head
+    contact_mail | mail of the society head
+    head_incharge | name of the society head
+    pr_incharge | name of the PR incharge
+    pr_contact_number | contact number of the PR
+    head_contact_number | contact number of the head
+    website | url of the society website
+    referrals | number of referrals
+    views | number of views
+    society_imgUrl | url of society image
     
  * ### News
     #### Example:
@@ -93,7 +151,41 @@
     society | object containing details about the society and the society news
     media | array of objects describing about the media 
     
-     
+* ### User
+    #### Example:
+    > https://api.dtutimes.com/v1/user
+    ### Parameters
+    Parameter | Description
+    --- | --- 
+    {id} | unique id of the user
+
+
+    #### Return value
+
+    Field | Description
+    --- | --- 
+    id | Unique id of the user
+    name | name of the user
+    uuid | universal unique id
+    email | email address of the user
+    username | username of the user
+    activated | status of activation
+    bio | User bio
+    data_of_birth | date of birth of user
+    linkedin | linkedin url of user
+    facebook | facebook url of user
+    instagram | instagram url of user
+    display_mail | email address of the user
+    email_verified_at |
+    created_at | date of creation
+    updated_at | date of updation
+    blocked | status of blocked
+    show | status of visibility
+    position | position held by the user
+    userImg | image url of the user photo
+    media | media details about the user
+
+
 * ### Editions
     #### Example:
     > https://api.dtutimes.com/v1/edition
