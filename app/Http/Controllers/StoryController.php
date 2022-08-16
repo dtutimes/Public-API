@@ -36,8 +36,8 @@ class StoryController extends Controller
         $user = User::find($story->user_id);
         $category = Category::find($story->category_id);
 
-        $user['imgUrl'] = $user->getFirstMediaUrl('avatars', 'thumb');
-        $story['imgUrl'] = $story->getFirstMediaUrl('blog_images', 'fullscreen');
+        $user['imgUrl'] = "https://nix.dtutimes.com/" . $user->getFirstMediaUrl('avatars', 'thumb');
+        $story['imgUrl'] = "https://nix.dtutimes.com/" . $story->getFirstMediaUrl('blog_images', 'fullscreen');
         $story['next'] = Story::find($next);
         $story['prev'] = Story::find($previous);
         $story['user'] = $user;

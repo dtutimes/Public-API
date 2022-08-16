@@ -25,7 +25,7 @@ class Story extends JsonResource
             'slug' => $this->slug,
             'views' => $this->views,
             'status' => $this->status,
-            'imgUrl'=> $this->getFirstMediaUrl('blog_images', 'fullscreen'),
+            'imgUrl'=> "https://nix.dtutimes.com/" . $this->getFirstMediaUrl('blog_images', 'fullscreen'),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'published_at' => $this->published_at,
